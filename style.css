@@ -1,0 +1,153 @@
+:root {
+  --bg-color: #121212;
+  --glass-color: rgba(255, 255, 255, 0.05);
+  --accent: #00d1b2;
+  --danger: #e74c3c;
+  --text: #f1f1f1;
+  --font: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--text);
+}
+
+.flags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #f1f1f1;
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.flag img {
+  width: 30px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.container {
+  background: var(--glass-color);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--accent);
+}
+
+.live-clock {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.about {
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.about a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}
+
+.stopwatch-display {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #fff;
+}
+
+.start {
+  background: var(--accent);
+}
+
+.stop {
+  background: #f39c12;
+}
+
+.reset {
+  background: var(--danger);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .live-clock {
+    font-size: 1.8rem;
+  }
+
+  .stopwatch-display {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
